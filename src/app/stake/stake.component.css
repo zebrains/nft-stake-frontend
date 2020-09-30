@@ -1,0 +1,98 @@
+h1, h2, h3 {
+  color: var(--light-green);
+  margin-top: 0.25rem;
+}
+
+.stake-card {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: 45%;
+  margin-top: 2rem;
+  color: var(--light-purple);
+  background-color: var(--purple-3);
+  border: 0.1rem solid var(--dodger-blue);
+}
+
+.stake-stats {
+  font-size: 1.25rem;
+}
+.stat {
+  color: var(--vivid-sky-blue);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.stats-holder {
+  margin-bottom: 0.5rem;
+}
+
+.card-header {
+  border-bottom: 2px solid var(--purple-2);
+}
+
+.stake-card-body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.form-control {
+  background-color : var(--trypan-blue-2) !important; 
+  color: white !important;
+}
+
+.available {
+  margin-top: 1rem;
+  color: var(--vivid-sky-blue);
+  font-weight: bold;
+}
+.btn-holder {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.transaction-btn {
+  margin: 0.25rem 0.25rem;
+  color: white;
+  font-weight: bold;
+  border: 1px solid white;
+}
+.stake-btn {
+  background-color: var(--vivid-sky-blue);
+}
+.stake-btn:hover {
+  background-color: var(--dodger-blue);
+}
+.mine-btn {
+  background-color: var(--trypan-blue-2);
+}
+.mine-btn:hover {
+  background-color: var(--ultramarine-blue);
+}
+.withdraw-btn {
+  background-color: var(--byzantine);
+}
+.withdraw-btn:hover {
+  background-color: var(--purple-2);
+}
+
+.form-group {
+  margin-top: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .stake-card {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .gem-img img {
+    width: 100px;
+    height: auto;
+  }
+  .btn-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .stake-btn, .mine-btn, .withdraw-btn {
+    display: block;
+  }
+}

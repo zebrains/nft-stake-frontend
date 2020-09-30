@@ -1,0 +1,13 @@
+<div class="container gem-holder">
+  <div class="" *ngFor="let g of gemsList">
+    <div class="card gem-card text-center">
+      <div class="gem-img">
+        <img src="{{g.img}}">
+      </div>
+      <div>ID: <span class="gem-stat">{{g.id}}</span></div>
+      <div>Alive: <span class="gem-stat">{{g.isStaked}}</span></div>
+      <div>Duration: <span class="gem-stat">{{g.duration}}</span></div>
+      <div>Amount: <span class="gem-stat">{{g.amount.toFormat()}}</span></div>
+    </div>
+  </div>
+</div>

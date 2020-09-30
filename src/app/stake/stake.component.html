@@ -1,0 +1,48 @@
+<div class="container gx-5">
+  <div class="row">
+    <div class="col card text-center stake-card">
+      <div class="card-header">
+        <h2>Growing Gem</h2>
+      </div>
+      <div class="stake-card-body">
+        <div class="gem-img">
+          <img src="/assets/gem-1-ani-big.gif">
+        </div>
+        <div class="stats-holder">
+          <div class="stake-stats">
+            Staking: <span class="stat">{{yfbStaked.toFormat()}}</span> yfβ
+          </div>
+          <div class="stake-stats">
+            Blocks staked: <span class="stat">{{stakeDuration.toFormat()}}</span>
+          </div>
+          <div class="stake-stats">
+            Mintable: <span class="stat">{{! hasMinted}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col card text-center stake-card">
+      <div class="card-header">
+        <h2>Manage Stake</h2>
+      </div>
+      <div class="stake-card-body">
+        <form>
+          <div class="form-group">
+            <label for="stakeAmountInput">yfβ Amount</label>
+            <div class="input-group">
+              <input id="stakeAmountInput" class="form-control" placeholder="0.0000" [(ngModel)]="stakeAmount" name="stakeAmountInput">
+            </div>
+            <div class="available">Available:
+              {{yfbBalance.toFormat()}}</div>
+          </div>
+        </form>
+        <div class="btn-holder">
+          <button type="button" class="btn stake-btn transaction-btn" (click)="stake()">Stake</button>
+          <button type="button" class="btn mine-btn transaction-btn" (click)="mine()">Mine Gem</button>
+          <button type="button" class="btn withdraw-btn transaction-btn" (click)="withdraw()">Withdraw All</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

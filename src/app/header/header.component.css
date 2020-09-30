@@ -1,0 +1,42 @@
+#logo {
+  width: 3rem;
+  height: auto;
+  padding-top: 0.25rem;
+}
+.navbar {
+  flex-wrap: nowrap;
+}
+.navbar-brand {
+  color: var(--byzantine);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.navbar-brand:hover {
+  color: var(--vivid-sky-blue);
+}
+
+.wallet-btn {
+  background-color: var(--dodger-blue);
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: 1px solid var(--purple);
+}
+.wallet-btn:hover {
+  background-color: var(--purple-2);
+}
+
+@media only screen and (max-width: 768px) {
+  #navbar-col {
+    flex: 10 0 0%;
+  }
+  #logo-col {
+    flex: unset;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #wallet-col {
+    flex: unset;
+    text-align: center;
+  }
+}

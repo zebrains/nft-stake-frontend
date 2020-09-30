@@ -1,0 +1,34 @@
+.gem-holder {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.gem-img {
+  margin-bottom: 0.5rem;
+}
+
+.gem-card {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  color: var(--light-purple);
+  background-color: var(--purple-3);
+  border: 0.1rem solid var(--dodger-blue);
+  line-height: 1.25rem;
+}
+
+.gem-stat {
+  font-weight: bold;
+  color: var(--vivid-sky-blue);
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .gem-img img {
+    width: 100px;
+    height: auto;
+  }
+}
