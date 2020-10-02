@@ -1,14 +1,11 @@
 import Web3 from 'web3';
 import Onboard from 'bnc-onboard';
-import Notify from 'bnc-notify';
+// import Notify from 'bnc-notify';
 import BigNumber from 'bignumber.js';
 
 export class Web3Enabled {
   blocknativeAPIKey: string;
   infuraKey: string;
-  portisAPIKey: string;
-  squarelinkKey: string;
-  fortmaticKey: string;
   assistInstance: any;
   notifyInstance: any;
   state: any;
@@ -18,7 +15,6 @@ export class Web3Enabled {
     this.assistInstance = null;
     this.blocknativeAPIKey = 'c094a276-3a28-4a57-a468-d61efa51e73c';
     this.infuraKey = 'eb5ba991ba924ec5b80fd85423fd901f';
-    this.fortmaticKey = 'pk_live_5DFF7F46E1DE0704';
     this.networkID = 1;
     this.state = {
       address: null
@@ -59,13 +55,7 @@ export class Web3Enabled {
           infuraKey: this.infuraKey,
           networkId: this.networkID,
           preferred: true
-        },
-        {
-          walletName: 'fortmatic',
-          apiKey: this.fortmaticKey,
-          networkId: this.networkID
-        },
-        { walletName: 'authereum', networkId: this.networkID },
+        }
       ];
 
       const walletChecks = [
@@ -140,15 +130,15 @@ export class Web3Enabled {
       onError();
     }
 
-    if (!this.notifyInstance) {
-      this.notifyInstance = Notify({
-        dappId: this.blocknativeAPIKey,
-        networkId: this.networkID
-      });
-      this.notifyInstance.config({
-        darkMode: false
-      });
-    }
+    // if (!this.notifyInstance) {
+    //   this.notifyInstance = Notify({
+    //     dappId: this.blocknativeAPIKey,
+    //     networkId: this.networkID
+    //   });
+    //   this.notifyInstance.config({
+    //     darkMode: false
+    //   });
+    // }
   }
 
   async estimateGas(func, val, _onError) {
@@ -166,9 +156,9 @@ export class Web3Enabled {
         gas: gasLimit,
       }).on('transactionHash', (hash) => {
         _onTxHash(hash);
-        const { emitter } = this.notifyInstance.hash(hash);
-        emitter.on('txConfirmed', _onReceipt);
-        emitter.on('txFailed', _onError);
+        // const { emitter } = this.notifyInstance.hash(hash);
+        // emitter.on('txConfirmed', _onReceipt);
+        // emitter.on('txFailed', _onError);
       }).on('error', (e) => {
         if (!e.toString().contains('newBlockHeaders')) {
           _onError(e);
@@ -186,9 +176,9 @@ export class Web3Enabled {
         value: val
       }).on('transactionHash', (hash) => {
         _onTxHash(hash);
-        const { emitter } = this.notifyInstance.hash(hash);
-        emitter.on('txConfirmed', _onReceipt);
-        emitter.on('txFailed', _onError);
+        // const { emitter } = this.notifyInstance.hash(hash);
+        // emitter.on('txConfirmed', _onReceipt);
+        // emitter.on('txFailed', _onError);
       }).on('error', (e) => {
         if (!e.toString().contains('newBlockHeaders')) {
           _onError(e);
@@ -213,9 +203,9 @@ export class Web3Enabled {
             gas: gasLimit,
           }).on('transactionHash', (hash) => {
             _onTxHash(hash);
-            const { emitter } = this.notifyInstance.hash(hash);
-            emitter.on('txConfirmed', _onReceipt);
-            emitter.on('txFailed', _onError);
+            // const { emitter } = this.notifyInstance.hash(hash);
+            // emitter.on('txConfirmed', _onReceipt);
+            // emitter.on('txFailed', _onError);
           }).on('error', (e) => {
             if (!e.toString().contains('newBlockHeaders')) {
               _onError(e);
@@ -230,9 +220,9 @@ export class Web3Enabled {
           gas: gasLimit,
         }).on('transactionHash', (hash) => {
           _onTxHash(hash);
-          const { emitter } = this.notifyInstance.hash(hash);
-          emitter.on('txConfirmed', _onReceipt);
-          emitter.on('txFailed', _onError);
+          // const { emitter } = this.notifyInstance.hash(hash);
+          // emitter.on('txConfirmed', _onReceipt);
+          // emitter.on('txFailed', _onError);
         }).on('error', (e) => {
           if (!e.toString().contains('newBlockHeaders')) {
             _onError(e);
