@@ -46,31 +46,11 @@ export class GemsComponent implements OnInit {
       if (endBlock.isLessThan(startBlock)) {
         endBlock = currBlock;
       }
-      gemData["img"] = this.mapGem(gemData["amount"]), this.mapGem(gemData["amount"]);
+      gemData["img"] = this.constants.mapGem(gemData["amount"], gemData["isStaked"]);
       gemData["duration"] = endBlock.minus(startBlock);
       this.gemsList.push(gemData);
     }
     console.log(this.gemsList);
-  }
-
-  mapGem(amount: BigNumber) {
-    let id = 0;
-    if (amount.isLessThan(new BigNumber(1000))) {
-      id = 5;
-    }
-    if (amount.isLessThan(new BigNumber(100))) {
-      id = 4;
-    }
-    if (amount.isLessThan(new BigNumber(10))) {
-      id = 3;
-    }
-    if (amount.isLessThan(new BigNumber(1))) {
-      id = 2;
-    }
-    if (amount.isLessThan(new BigNumber(0.1))) {
-      id = 1;
-    }
-    return "https://raw.githubusercontent.com/owenshen24/gems/master/assets/gem-" + id + ".gif";
   }
 
   resetData() {}

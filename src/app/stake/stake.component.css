@@ -1,5 +1,5 @@
 h1, h2, h3 {
-  color: var(--light-green);
+  color: white;
   margin-top: 0.25rem;
 }
 
@@ -10,7 +10,11 @@ h1, h2, h3 {
   margin-top: 2rem;
   color: var(--light-purple);
   background-color: var(--purple-3);
-  border: 0.1rem solid var(--dodger-blue);
+  border: 2px solid var(--dodger-blue);
+}
+
+.gem-img {
+  margin-bottom: 0.5rem;
 }
 
 .stake-stats {
@@ -40,19 +44,21 @@ h1, h2, h3 {
 }
 
 .available {
-  margin-top: 1rem;
-  color: var(--vivid-sky-blue);
+  margin-top: 0.75rem;
+  color: var(--light-purple);
   font-weight: bold;
+  font-size: 1.1rem;
 }
 .btn-holder {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 .transaction-btn {
   margin: 0.25rem 0.25rem;
   color: white;
   font-weight: bold;
-  border: 1px solid white;
+  border: 1px solid var(--light-green);
+  font-size: 1.1rem;
 }
 .stake-btn {
   background-color: var(--vivid-sky-blue);

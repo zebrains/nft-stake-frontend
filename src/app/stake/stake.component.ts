@@ -14,6 +14,7 @@ export class StakeComponent implements OnInit {
   yfbBalance: BigNumber;
   yfbStaked: BigNumber;
   stakeDuration: BigNumber;
+  img: string;
   stakeAmount: string;
   hasMinted: boolean;
 
@@ -42,6 +43,7 @@ export class StakeComponent implements OnInit {
       const currBlock = new BigNumber(await this.wallet.web3.eth.getBlockNumber());
       this.stakeDuration = currBlock.minus(startBlock);
       this.hasMinted = stakeRecord["hasMinted"];
+      this.img = this.constants.mapGem(new BigNumber(stakeRecord["amount"]).div(this.constants.PRECISION), true);
     }
   }
 
@@ -49,8 +51,9 @@ export class StakeComponent implements OnInit {
     this.yfbBalance = new BigNumber(0);
     this.yfbStaked = new BigNumber(0);
     this.stakeDuration = new BigNumber(0);
-    this.stakeAmount = '0';
+    this.stakeAmount = '0.1';
     this.hasMinted = true;
+    this.img = "./assets/gem-blank.png";
   }
 
   stake() {

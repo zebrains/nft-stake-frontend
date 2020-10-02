@@ -25,6 +25,12 @@ const routes: Routes = [
     path: 'about',
     component: AboutComponent,
     pathMatch: 'full'
+  },
+  {
+    // wildcard routing?
+    path: '**',
+    component: StakeComponent,
+    pathMatch: 'full'
   }
 ];
 
