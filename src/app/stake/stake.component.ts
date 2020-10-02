@@ -51,7 +51,7 @@ export class StakeComponent implements OnInit {
     this.yfbBalance = new BigNumber(0);
     this.yfbStaked = new BigNumber(0);
     this.stakeDuration = new BigNumber(0);
-    this.stakeAmount = '0.1';
+    this.stakeAmount = '0';
     this.hasMinted = true;
     this.img = "./assets/gem-blank.png";
   }

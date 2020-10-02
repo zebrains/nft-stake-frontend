@@ -57,6 +57,7 @@ h1, h2, h3 {
 .instructions summary {
   font-size: 1.1rem;
   font-weight: bold;
+  background-color: var(--ultramarine-blue);
 }
 .instructions li {
   color: white;
@@ -112,7 +113,7 @@ h1, h2, h3 {
   background-color: var(--byzantine);
 }
 .withdraw-btn:hover {
-  background-color: var(--purple-2);
+  background-color: var(--purple);
 }
 
 .form-group {
