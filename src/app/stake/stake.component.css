@@ -49,8 +49,44 @@ h1, h2, h3 {
   font-weight: bold;
   font-size: 1.1rem;
 }
+
+.instructions {
+  margin-top: 0.5rem;
+  color: var(--vivid-sky-blue);
+}
+.instructions summary {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.instructions li {
+  color: white;
+}
+
+.blinking-cursor {
+  font-weight: bold;
+  color: var(--vivid-sky-blue);
+  -webkit-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: var(--vivid-sky-blue);
+  }
+}
+@-webkit-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: var(--vivid-sky-blue);;
+  }
+}
+
 .btn-holder {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 .transaction-btn {

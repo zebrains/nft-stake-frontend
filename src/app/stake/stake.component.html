@@ -29,12 +29,22 @@
       <div class="stake-card-body">
         <form>
           <div class="form-group">
-            <label for="stakeAmountInput">yfβ Amount</label>
             <div class="input-group">
-              <input id="stakeAmountInput" class="form-control" placeholder="0.0000" [(ngModel)]="stakeAmount" name="stakeAmountInput">
+              <input id="stakeAmountInput" class="form-control" placeholder="0.0000" [(ngModel)]="stakeAmount" name="stakeAmountInput" autofocus>
             </div>
             <div class="available">Available:
-              {{yfbBalance.toFormat()}}</div>
+              {{yfbBalance.toFormat()}} yfβ
+            </div>
+            <details class="instructions">
+              <summary>Instructions<span class="blinking-cursor">|</span></summary>
+              <div class="text-left">
+                <ol>
+                  <li>Enter in the amount of yfβ you want to stake and click <b>Stake</b>. Approve the transactions.</li>
+                  <li>Click the <b>Mine Gem</b> button to mine a Gem that represents your stake.</li>
+                  <li>When you want to stop staking, click <b>Withdraw All</b></li>
+                </ol>
+              </div>
+            </details>
           </div>
         </form>
         <div class="btn-holder">

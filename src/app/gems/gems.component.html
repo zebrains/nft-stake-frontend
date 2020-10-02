@@ -4,10 +4,11 @@
       <div class="gem-img">
         <img src="{{g.img}}">
       </div>
-      <div>ID: <span class="gem-stat">{{g.id}}</span></div>
-      <div>Alive: <span class="gem-stat">{{g.isStaked}}</span></div>
-      <div>Duration: <span class="gem-stat">{{g.duration}}</span></div>
+      <div>ID: <a href="https://etherscan.io/token/0xc5802bcf619301bdc6b1b9eda4b6fd26e63339af?a={{g.id}}" class="unstyled-link"><span class="gem-stat">{{g.id}}</span></a></div>
       <div>Amount: <span class="gem-stat">{{g.amount.toFormat()}}</span></div>
+      <div>Duration: <span class="gem-stat">{{g.duration}}</span></div>
+      <div>Alive: <span class="gem-stat">{{g.isStaked}}</span></div>
+      <div>Miner: <a href="https://etherscan.io/address/{{g.minter}}" class="unstyled-link"><span class="gem-stat">{{g.minter.substring(0, 5)}}…</span></a></div>
     </div>
   </div>
 </div>

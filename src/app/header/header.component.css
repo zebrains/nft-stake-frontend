@@ -6,7 +6,7 @@
 #logo:hover {
   /* filter: invert(27%); */
   -webkit-animation: hue-animation 5s infinite;
-  animation: hue-animation 3s infinite;
+  animation: hue-animation 5s infinite;
 }
 @-webkit-keyframes hue-animation {
   0% {
@@ -27,7 +27,7 @@
     filter: hue-rotate(170deg) brightness(160%);
   }
   100% {
-    filter: hue-rotate(0deg) brightness((80%));
+    filter: hue-rotate(0deg) brightness(80%);
   }
 }
 
@@ -41,8 +41,14 @@
   padding-left: 0.35rem;
   padding-right: 0.35rem;
 }
-.navbar-brand:hover {
-  color: var(--dodger-blue);
+.navbar-brand span:hover {
+  background: linear-gradient(
+  var(--flickr-pink),
+  var(--vivid-sky-blue)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .wallet-btn {
