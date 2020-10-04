@@ -2,20 +2,20 @@
   <div class="row">
     <div class="col card text-center stake-card">
       <div class="card-header">
-        <h2>Growing Gem</h2>
+        <h2>Growing βetagems</h2>
       </div>
       <div class="stake-card-body">
         <div class="gem-img">
           <img src="{{img}}">
         </div>
         <div class="stats-holder">
-          <div class="stake-stats">
+          <div class="stake-stats" title="The amount of yfβ you are staking.">
             Staking: <span class="stat">{{yfbStaked.toFormat()}}</span> yfβ
           </div>
-          <div class="stake-stats">
+          <div class="stake-stats" title="The number of blocks you have staked so far.">
             Blocks staked: <span class="stat">{{stakeDuration.toFormat()}}</span>
           </div>
-          <div class="stake-stats">
+          <div class="stake-stats" title="Whether or not you have mined this Gem. Don't forget to mine!">
             Minable: <span class="stat">{{! hasMinted}}</span>
           </div>
         </div>
@@ -40,7 +40,7 @@
               <div class="text-left">
                 <ol>
                   <li>Enter in the amount of yfβ you want to stake and click <b>Stake</b>. Approve the transactions.</li>
-                  <li>Click the <b>Mine Gem</b> button to mine a Gem that represents your stake.</li>
+                  <li>Click the <b>Mine Gem</b> button to mine a βetagem that represents your stake.</li>
                   <li>When you want to stop staking, click <b>Withdraw All</b></li>
                 </ol>
               </div>

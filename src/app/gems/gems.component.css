@@ -24,6 +24,10 @@
   border: 2px solid var(--dodger-blue);
   line-height: 1.35rem;
   margin-top: 1rem;
+  font-size: 1.1rem;
+}
+.gem-card:hover {
+  filter: brightness(120%);
 }
 
 .gem-stat {

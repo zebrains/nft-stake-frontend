@@ -27,6 +27,7 @@ h1, h2, h3 {
 }
 .stats-holder {
   margin-bottom: 0.5rem;
+  cursor: default;
 }
 
 .card-header {
@@ -53,11 +54,14 @@ h1, h2, h3 {
 .instructions {
   margin-top: 0.5rem;
   color: var(--vivid-sky-blue);
+  background-color: var(--trypan-blue-2);
+  padding-bottom: 0.1rem;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
 }
 .instructions summary {
   font-size: 1.1rem;
   font-weight: bold;
-  background-color: var(--ultramarine-blue);
 }
 .instructions li {
   color: white;
