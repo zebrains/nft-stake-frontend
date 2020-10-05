@@ -3,6 +3,6 @@
     <h2>Total yfβ staked</h2>
   </div>
   <div class="stake-amt">
-    {{yfbBalance.toFormat()}}
+    {{yfbBalance.toString() | number: '1.0-2'}}
   </div>
 </div>
