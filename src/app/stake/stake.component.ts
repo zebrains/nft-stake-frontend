@@ -43,7 +43,7 @@ export class StakeComponent implements OnInit {
       const currBlock = new BigNumber(await this.wallet.web3.eth.getBlockNumber());
       this.stakeDuration = currBlock.minus(startBlock);
       this.hasMinted = stakeRecord["hasMinted"];
-      this.img = this.constants.mapGem(new BigNumber(stakeRecord["amount"]).div(this.constants.PRECISION), true);
+      this.img = this.constants.mapGem(new BigNumber(stakeRecord["amount"]).div(this.constants.PRECISION), startBlock, currBlock, true);
     }
   }
 

@@ -46,7 +46,7 @@ export class GemsComponent implements OnInit {
       if (endBlock.isLessThan(startBlock)) {
         endBlock = currBlock;
       }
-      gemData["img"] = this.constants.mapGem(gemData["amount"], gemData["isStaked"]);
+      gemData["img"] = this.constants.mapGem(gemData["amount"], startBlock, endBlock, gemData["isStaked"]);
       gemData["duration"] = endBlock.minus(startBlock);
       this.gemsList.push(gemData);
     }

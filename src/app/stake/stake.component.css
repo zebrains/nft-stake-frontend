@@ -14,7 +14,12 @@ h1, h2, h3 {
 }
 
 .gem-img {
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
+}
+.gem-img img {
+  width: 12rem;
+  height: auto;
 }
 
 .stake-stats {
